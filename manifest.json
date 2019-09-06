@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "にゃ～ん",
+    "description": "twitterタイムラインの画像を猫画像に、本文を猫語に変換します。",
+    "version": "1.0",
+    "icons": {
+        "32": "icon.jpg",
+        "48": "icon.jpg",
+        "128": "icon.jpg"
+    },
+    "content_scripts": [{
+        "matches": ["https://twitter.com/*"],
+        "js": ["content_scripts.js"]
+    }],
+    "browser_action": {
+        "default_icon": "icon.jpg",
+        "default_title": "にゃ～ん",
+        "default_popup": "popup.html"
+    },
+    "web_accessible_resources": [
+        "images/*",
+        "icon.jpg"
+    ]
+}
